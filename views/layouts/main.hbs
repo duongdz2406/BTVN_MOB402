@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{{body}}}
+     {{#if showContentTinhToan}}
+    <h2>So A: {{soA}}</h2>
+    <h2>So B: {{soB}}</h2>
+    <h2>Phep tinh: {{phepTinh}}</h2>
+    <h2>Ket qua: {{kq}}</h2>
+    {{/if}}
+
+    {{#if showPhepTinh}}
+   <input type="text" placeholder="so a"> 
+   <input type="text" placeholder="so b"> 
+   <p>Phep tinh</p>
+   <select name="" id="">
+        <option value="">+</option>
+        <option value="">-</option>
+        <option value="">x</option>
+        <option value="">/</option>
+
+   </select>
+   <br>
+   <button type="submit">Tinh toan</button>
+   <br>
+   <h1>Ket qua</h1>
+   <br>
+   <input type="text">
+   
+{{/if}}
+    
+</body>
+</html>
