@@ -16,22 +16,53 @@
     {{/if}}
 
     {{#if showPhepTinh}}
-   <input type="text" placeholder="so a"> 
-   <input type="text" placeholder="so b"> 
+   <input type="text" placeholder="so a" id="soA"> 
+   <input type="text" placeholder="so b" id="soB"> 
    <p>Phep tinh</p>
-   <select name="" id="">
-        <option value="">+</option>
-        <option value="">-</option>
-        <option value="">x</option>
-        <option value="">/</option>
+   <select name="" id="luachon">
+        <option value="cong">+</option>
+        <option value="tru">-</option>
+        <option value="nhan">x</option>
+        <option value="chia">/</option>
 
    </select>
    <br>
-   <button type="submit">Tinh toan</button>
+   <button onclick="tinh()" type="submit">Tinh toan</button>
    <br>
    <h1>Ket qua</h1>
    <br>
-   <input type="text">
+   <p id="kq"></p>
+   <script>
+    function tinh(){
+        var num1 = parseInt(document.getElementById("soA").value);
+	var num2 = parseInt(document.getElementById("soB").value);
+   
+    var luachon = document.getElementById("luachon").value;
+        
+        switch(luachon){
+            case "cong": 
+             kq = num1+num2;
+             break;
+
+             case "tru": 
+             kq = num1-num2;
+             break;
+
+             case "nhan": 
+             kq = num1*num2;
+             break;
+
+             case "chia": 
+             kq = num1/num2;
+             break;
+            
+
+        }
+       
+        document.getElementById("kq").innerHTML =   kq;
+    }
+
+   </script>
    
 {{/if}}
     
